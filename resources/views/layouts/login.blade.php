@@ -8,6 +8,8 @@
     <title></title>
     <link rel="stylesheet" href="{{ asset('css/reset.css') }} ">
     <link rel="stylesheet" href="{{ asset('css/style.css') }} ">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
     <!--スマホ,タブレット対応-->
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <!--サイトのアイコン指定-->
@@ -21,17 +23,25 @@
 </head>
 <body>
     <header>
-        <div id = "head">
-        <h1><a><img src="images/logo.png"></a></h1>
-            <div id="">
-                <div id="">
-                    <p>〇〇さん<img src="images/arrow.png"></p>
-                <div>
-                <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
-                    <li><a href="/logout">ログアウト</a></li>
-                </ul>
+        <div class="wrapper">
+            <div class="left">
+                <h1><a href="/top"><img class="title_logo" src="images/atlas.png"></a></h1>
+            </div>
+            <div class="right">
+                <div class="name">
+                    <p>〇〇さん</p>
+                </div>
+                <nav class="accordion">
+                    <div class="accordion_button"></div>
+                    <ul class="accordion_menu">
+                        <li class="home"><a href="/top">HOME</a></li>
+                        <li class="profile"><a href="/profile">プロフィール編集</a></li>
+                        <li class="logout"><a href="/logout">ログアウト</a></li>
+                    </ul>
+                </nav>
+                <div class="name_icon">
+                    <img class="icon" src="images/icon1.png">
+                </div>
             </div>
         </div>
     </header>
@@ -58,7 +68,14 @@
     </div>
     <footer>
     </footer>
-    <script src="JavaScriptファイルのURL"></script>
-    <script src="JavaScriptファイルのURL"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $('.accordion_button').click(function () {
+            $(this).toggleClass('is-open');
+            $(this).siblings('.accordion_menu').toggleClass('is-open');
+        });
+    </script>
 </body>
 </html>

@@ -1,9 +1,14 @@
 @extends('layouts.logout')
 
+<?php
+$username = $_POST["username"]
+
+?>
+
 @section('content')
 
 <div id="clear">
-  <p>〇〇さん</p>
+  <p><?php echo htmlspecialchars($username)?>さん</p>
   <p>ようこそ！AtlasSNSへ！</p>
   <p>ユーザー登録が完了しました。</p>
   <p>早速ログインをしてみましょう。</p>

@@ -20,14 +20,16 @@
   <!--OGPタグ/twitterカード-->
 </head>
 <body>
-  <header>
-    <h1><img src="images/atlas.png"></h1>
-    <p>Social Network Service</p>
-  </header>
-  <div id="container">
-    @yield('content')
+  <div class="wrapper">
+    <header id="title">
+      <h1><img class="title_logo" src="images/atlas.png"></h1>
+      <p class="title_text">Social Network Service</p>
+    </header>
+    <div id="container">
+      @yield('content')
+    </div>
+    <script src="JavaScriptファイルのURL"></script>
+    <script src="JavaScriptファイルのURL"></script>
   </div>
-  <script src="JavaScriptファイルのURL"></script>
-  <script src="JavaScriptファイルのURL"></script>
 </body>
 </html>

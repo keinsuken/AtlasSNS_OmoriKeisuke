@@ -1,22 +1,147 @@
 @charset "utf-8";
-html{
-}
-body{
-}
+
+html {}
+
+body {}
+
 /* header */
-header{
-    background:#186AC9;
+header {
+    background: #186AC9;
+    height: 80px;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.wrapper .right {
+    margin: 0 0 0 auto;
+    display: flex;
+    padding-top: 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 10px;
+
+}
+
+.accordion {
+    /* 位置の調節 */
+    margin-right: -150px or -100px;
+    margin-top: 10px;
+}
+
+/* 閉じてる時のボタンの形 */
+.accordion_button {
+    display: block;
+    /* width: 200x; */
+    height: 33px;
+    border-top: 0px solid #fff;
+    position: relative;
+    /* flex-direction: column; */
+}
+
+.accordion_button::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 2.5px;
+    background: #fff;
+    position: absolute;
+    top: calc(60% - 5px);
+    right: 10;
+    transform: rotate(110deg);
+    transform-origin: calc(100% - 3px) 60%;
+}
+
+.accordion_button::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 2.5px;
+    background: #fff;
+    position: absolute;
+    top: calc(60% - 5px);
+    left: 10;
+    transform-origin: calc(100% - 5px) 30%;
+    transform: rotate(70deg);
+}
+
+/* 閉じているとき */
+.accordion_menu {
+    position: relative;
+    /* background: #fff; */
+    color: black;
+    opacity: 0;
+}
+
+/* 開いた時 */
+.accordion_menu .is-open {
+    padding: 20px;
+    line-height: 1.5;
+    opacity: 1;
+}
+
+/* ボタンの形 */
+.accordion_button .is-open ::before {
+    transform: rotate(90deg) translateY(-10px);
+}
+
+.accordion_menu .home {
+    padding-top: 50px;
+    margin-right: 30px;
+}
+
+.accordion_menu .profile {
+    padding-top: 10px;
+    margin-right: 30px;
+}
+
+.accordion_menu .logout {
+    padding-top: 10px;
+    margin-right: 30px;
+}
+
+.name_icon {}
+
+.icon {
+    padding-right: 30px;
+    width: 73px;
+
+}
+
+
+
+
+h1 {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding-bottom: 6.5px;
+}
+
+.title_logo {
+    height: 34.5px;
+    padding-left: 23.5px;
+
 }
 
 /* main content */
-#row{
+#row {
     display: flex;
     flex-flow: row wrap;
 }
-#container{
+
+#container {
     flex: 0 0 80%;
 }
-#side-bar{
+
+#side-bar {
     flex: 0 0 19%;
     border-left: 1px solid #727272;
 }
